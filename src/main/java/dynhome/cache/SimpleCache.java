@@ -10,10 +10,12 @@ public class SimpleCache {
 
     CacheManager singletonManager = CacheManager.create();
     Cache memoryOnlyCache = new Cache("IentityCache", 5000, false, false, 5, 2);
-    Cache identityCache = singletonManager.getCache("IentityCache"); 
+   
+    Cache identityCache;
     
     public SimpleCache(){ 
         singletonManager.addCache (memoryOnlyCache); 
+        identityCache= singletonManager.getCache("IentityCache"); 
     }
     
     public void Put(String key, IIdentity identity)
@@ -22,7 +24,7 @@ public class SimpleCache {
     }
     
     public IIdentity Get(String key)
-    { 
+    {  
         Element ele = identityCache.get(key);
         if(ele != null)
         { 
