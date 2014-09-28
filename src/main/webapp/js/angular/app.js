@@ -1,5 +1,5 @@
  
-   var app = angular.module("PhotoApp", [ "ngResource"]); 
+   var app = angular.module("PhotoApp", [ "ngResource", 'ngRoute']); 
    
    app.config(
         function($routeProvider){
@@ -19,7 +19,12 @@
                 templateUrl:"templates/about.html",
                 controller:"MainController" 
             })
-                   .otherwise({redirectTo: '/main'});
+                    .when("/newEvent",
+             {
+                 templateUrl:"templates/NewEvent.html",
+                 controller:"EditEvenController"
+             })
+                    .otherwise({redirectTo: '/main'});
            
            
             $routeProvider.otherwise({redirectTo: '/main'});
