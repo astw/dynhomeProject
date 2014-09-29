@@ -26,7 +26,5 @@
              })
                     .otherwise({redirectTo: '/main'});
            
-           
-            $routeProvider.otherwise({redirectTo: '/main'});
         } 
   );  
