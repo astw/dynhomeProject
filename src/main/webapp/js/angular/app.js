@@ -6,7 +6,7 @@
             $routeProvider
                     .when("/main", 
             {
-                templateUrl:"templates/index.html",
+                templateUrl:"templates/main.html",
                 controller:"MainController"
             })
                     .when("/account/login",
@@ -30,7 +30,6 @@
                  controller:"EventController.js"                 
              })
              ;
-            $routeProvider.otherwise({redirectTo: '/main'});
-           
+            $routeProvider.otherwise({redirectTo: '/main'});           
         } 
   );  
