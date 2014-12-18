@@ -243,19 +243,8 @@
             <version>1.12.6</version>
             <type>jar</type>
         </dependency>
-<!--        <dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-jpa</artifactId>
-			<version>1.3.0.RELEASE</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-aop</artifactId>
-				</exclusion>
-			</exclusions>
-	</dependency>-->
     </dependencies>
     <build>
-        <finalName>ngdemo</finalName> 
+        <finalName>ngdemo</finalName>
     </build>
 </project>
